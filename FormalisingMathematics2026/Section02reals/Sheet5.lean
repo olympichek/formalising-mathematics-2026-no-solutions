@@ -23,7 +23,6 @@ theorem tendsTo_neg {a : ℕ → ℝ} {t : ℝ} (ha : TendsTo a t) : TendsTo (fu
   ring_nf
   specialize hB n hn
   exact hB
-  done
 
 /-
 `tendsTo_add` is the next challenge. In a few weeks' time I'll
