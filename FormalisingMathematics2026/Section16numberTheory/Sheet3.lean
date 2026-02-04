@@ -33,8 +33,6 @@ theorem divides_of_cong_four (t : ℕ) :
 theorem arb_large_soln :
     ∀ N : ℕ, ∃ n > N, 5 ∣ 4 * n ^ 2 + 1 ∧ 13 ∣ 4 * n ^ 2 + 1 := sorry
 
-#check Set.Infinite
-
 -- This is not number theory any more, it's switching between two
 -- interpretations of "this set of naturals is infinite"
 theorem infinite_iff_arb_large (S : Set ℕ) :

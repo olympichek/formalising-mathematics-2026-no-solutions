@@ -37,5 +37,10 @@ example (X Y Z : Type) [TopologicalSpace X] [TopologicalSpace Y] [TopologicalSpa
 
 example (X Y Z : Type) [TopologicalSpace X] [TopologicalSpace Y] [TopologicalSpace Z]
     (f : X → Y) (g : Y → Z) (hf : Continuous f) (hg : Continuous g) : Continuous (g ∘ f) := by
-  -- And of course it's already in the library.
+  -- In fact there's a tactic for proving a few different types of properties about functions
+  fun_prop
+
+example (X Y Z : Type) [TopologicalSpace X] [TopologicalSpace Y] [TopologicalSpace Z]
+    (f : X → Y) (g : Y → Z) (hf : Continuous f) (hg : Continuous g) : Continuous (g ∘ f) := by
+  -- And of course it's also already in the library (which is why the earlier two tactics worked)
   exact Continuous.comp hg hf

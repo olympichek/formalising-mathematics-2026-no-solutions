@@ -18,7 +18,7 @@ held. But it turns out that in a general lattice, one of these equalities holds 
 other one does! This was quite surprising to me.
 
 The challenge is to prove it in Lean. My strategy would be to prove it on paper first
-and then formalise the proof. If you're not in to puzzles like this, then feel free to skip
+and then formalise the proof. If you're not into puzzles like this, then feel free to skip
 this question.
 
 -/

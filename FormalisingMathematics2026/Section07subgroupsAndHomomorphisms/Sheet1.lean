@@ -104,8 +104,6 @@ satisfies the axioms for a subgroup.
 -/
 variable {G H} {x : G}
 
-#where
-
 variable {y z : G}
 
 theorem conjugate.one_mem : (1 : G) ∈ {a : G | ∃ h, h ∈ H ∧ a = x * h * x⁻¹} := by

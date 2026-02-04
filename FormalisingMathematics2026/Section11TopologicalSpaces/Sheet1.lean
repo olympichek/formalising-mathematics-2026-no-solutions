@@ -42,10 +42,8 @@ example : TopologicalSpace X where
     -- By definition, this means "can you prove `True`"?
     trivial
   isOpen_sUnion := by
-    -- say F is a family of sets
-    intro F
-    -- say they're all open
-    intro hF
+    -- say F is a family of sets and they're all open
+    intro F hF
     -- Is their union open?
     trivial
 
@@ -109,5 +107,3 @@ example : TopologicalSpace ℝ where
   isOpen_univ := Real.isOpen_univ
   isOpen_inter := Real.isOpen_inter
   isOpen_sUnion := Real.isOpen_sUnion
-
-#lint
