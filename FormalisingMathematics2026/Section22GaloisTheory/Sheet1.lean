@@ -55,7 +55,7 @@ example {R S : Type*} [CommRing R] [CommRing S] (I : Ideal R)
     (f : R →+* S) : I ≤ (I.map f).comap f := by
   intro x hx
   rw [Ideal.mem_comap]
-  rw [Ideal.mem_map] -- eek! `Ideal.map` isn't so straightforward!
+  -- eek! there's no `Ideal.mem_map`!
   sorry
 
 example {R S : Type*} [CommRing R] [CommRing S] (I : Ideal R)
@@ -131,13 +131,13 @@ example {F K L : Type*} [Field F] [Field K] [Field L]
 
 example {K L : Type*} [Field K] [Field L] [Algebra K L]
     (F E : IntermediateField K L)
-    (hF : Module.finrank K F = 37) (hK : Module.finrank K E = 42) :
+    (hF : Module.finrank K F = 37) (hE : Module.finrank K E = 42) :
     F ⊓ E = ⊥ := by
   sorry
 
 example {K L : Type*} [Field K] [Field L] [Algebra K L]
     (F E : IntermediateField K L)
-    (hF : Module.finrank K F = 37) (hK : Module.finrank K E = 42) :
+    (hF : Module.finrank K F = 37) (hE : Module.finrank K E = 42) :
     Module.finrank K (F ⊔ E : IntermediateField K L) = 37 * 42 := by
   sorry
 
@@ -166,8 +166,8 @@ example : IsGalois K L ↔ fixedField (⊤ : Subgroup Gal(L/K)) = ⊥ := by
 example : IsGalois K L ↔ Nat.card Gal(L/K) = Module.finrank K L := by
   exact IsGalois.tfae.out 0 2
 
-example :
-  IsGalois K L ↔ ∃ p : K[X], p.Separable ∧ p.IsSplittingField K L := by
+example : IsGalois K L ↔
+    ∃ p : K[X], p.Separable ∧ p.IsSplittingField K L := by
   exact IsGalois.tfae.out 0 3
 
 example (F E : IntermediateField K L) :
