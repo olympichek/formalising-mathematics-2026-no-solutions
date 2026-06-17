@@ -5,6 +5,7 @@ Authors: Bhavik Mehta, Kevin Buzzard
 -/
 import Mathlib.Tactic
 -- imports all the Lean tactics
+import FormalisingMathematics2026.Section02reals.Sheet3
 -- import the definition of `TendsTo` from a previous sheet
 
 namespace Section2sheet5

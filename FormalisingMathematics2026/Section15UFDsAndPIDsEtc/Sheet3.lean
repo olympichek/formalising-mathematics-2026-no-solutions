@@ -48,7 +48,7 @@ If `R` is a commutative ring, let's define `a ★ b` to mean "a strictly divides
 i.e. that there exists a non-unit `c` such that `b = a * c`. The mathlib folks
 in their wisdom decided to call `R` a `WfDvdMonoid` ("a well-founded monoid under division")
 if this relation is well-founded. For example the integers are a `WfDvdMonoid`,
-because (for example) 24 ★ 0, 12 ★ 24, 3 ★ 12, 1 ★ 3, but there is no x satisfying `x ★ 1`.
+because (for example) 24 ★ 0, 12 ★ 24, 3 ★ 12, 1 ★ 3, but there is no `x` satisfying `x ★ 1`.
 
 -/
 example : WfDvdMonoid ℤ := by infer_instance
